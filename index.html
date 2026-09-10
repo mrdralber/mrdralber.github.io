@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个韩寒-韩寒作品集与创作历程全览</title>
+    <meta name="description" content="一个韩寒，是了解韩寒及其文学、电影、赛车生涯的综合性门户。这里汇集韩寒全部小说、杂文、博客精选、电影作品、赛车赛事动态，以及关于韩寒的深度访谈与最新资讯。">
+    <meta name="keywords" content="一个韩寒,韩寒,韩寒作品,韩寒小说,韩寒电影,后会无期,乘风破浪,飞驰人生,韩寒博客,韩寒赛车">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f5f0e8;
+            color: #2c2c2c;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: #1a1a1a;
+            color: #f0e6d2;
+            padding: 20px 0;
+            border-bottom: 4px solid #c8a96e;
+        }
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: #e8d5b5;
+        }
+        .logo p {
+            font-size: 0.9rem;
+            color: #b0a28a;
+            letter-spacing: 1px;
+        }
+        nav {
+            background: #2a2a2a;
+            border-bottom: 1px solid #444;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+        nav ul li {
+            margin-right: 5px;
+        }
+        nav ul li a {
+            display: block;
+            padding: 12px 20px;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s, color 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: #3a3a3a;
+            color: #e8d5b5;
+            border-bottom-color: #c8a96e;
+        }
+        .hero {
+            background: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
+            color: #f0e6d2;
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "一个韩寒";
+            position: absolute;
+            right: -30px;
+            bottom: -30px;
+            font-size: 8rem;
+            color: rgba(255,255,255,0.03);
+            font-weight: 900;
+            letter-spacing: 10px;
+            pointer-events: none;
+        }
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #c8b89a;
+        }
+        .hero .btn {
+            display: inline-block;
+            background: #c8a96e;
+            color: #1a1a1a;
+            padding: 12px 36px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 30px;
+            transition: background 0.3s, transform 0.2s;
+            letter-spacing: 1px;
+        }
+        .hero .btn:hover {
+            background: #e0c48a;
+            transform: translateY(-2px);
+        }
+        .intro {
+            background: #fff;
+            padding: 60px 0;
+        }
+        .intro .container {
+            max-width: 900px;
+        }
+        .intro h3 {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            border-left: 5px solid #c8a96e;
+            padding-left: 20px;
+        }
+        .intro p {
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            text-indent: 2em;
+            color: #444;
+        }
+        .section-block {
+            padding: 60px 0;
+        }
+        .section-block:nth-child(even) {
+            background: #fff;
+        }
+        .section-block:nth-child(odd) {
+            background: #f5f0e8;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            position: relative;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #c8a96e;
+            margin: 15px auto 0;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #c8a96e;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        .card .meta {
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            margin-top: 15px;
+        }
+        .list-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .list-timeline .item {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .list-timeline .item .year {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #c8a96e;
+            min-width: 80px;
+        }
+        .list-timeline .item .content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .list-timeline .item .content p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .film-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .film-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .film-item:hover {
+            transform: scale(1.02);
+        }
+        .film-item .film-cover {
+            height: 150px;
+            background: linear-gradient(135deg, #2c2c2c, #555);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e8d5b5;
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+        }
+        .film-item .film-info {
+            padding: 20px;
+        }
+        .film-item .film-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .film-item .film-info p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .quote-section {
+            background: #1a1a1a;
+            color: #e8d5b5;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .quote-section blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .quote-section cite {
+            font-size: 1rem;
+            color: #c8a96e;
+            font-style: normal;
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 25px 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .faq-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            cursor: pointer;
+        }
+        .faq-item p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 40px 0 20px;
+            border-top: 4px solid #c8a96e;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-grid h4 {
+            color: #e8d5b5;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .footer-grid ul {
+            list-style: none;
+        }
+        .footer-grid ul li {
+            margin-bottom: 8px;
+        }
+        .footer-grid ul li a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .footer-grid ul li a:hover {
+            color: #e8d5b5;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 1.6rem;
+            }
+            nav ul li a {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+            .hero {
+                padding: 50px 0 40px;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .list-timeline .item {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .list-timeline .item .year {
+                min-width: auto;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .film-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-wrap">
+            <div class="logo">
+                <h1>一个韩寒</h1>
+                <p>写作者 · 电影导演 · 赛车手</p>
+            </div>
+            <div style="color:#888; font-size:0.9rem;">www.yigehanhan.com</div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul class="container">
+            <li><a href="#" class="active">首页</a></li>
+            <li><a href="#">文学作品</a></li>
+            <li><a href="#">电影作品</a></li>
+            <li><a href="#">赛车生涯</a></li>
+            <li><a href="#">博客精选</a></li>
+            <li><a href="#">访谈记录</a></li>
+            <li><a href="#">关于本站</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h2>一个韩寒，不止一个侧面</h2>
+            <p>他是少年成名的畅销书作家，是敢于表达自我的公共知识分子，是跨界执导的电影导演，也是驰骋赛场的职业车手。在这里，读懂一个完整的韩寒。</p>
+            <a href="#" class="btn">浏览作品全集</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <h3>关于"一个韩寒"</h3>
+            <p>韩寒，1982年9月23日出生于上海市金山区，中国内地作家、导演、职业赛车手。1999年，他以《杯中窥人》一文获得首届全国新概念作文比赛一等奖，随后因期末考试七科不及格而退学，引发社会广泛讨论。2000年，他出版首部长篇小说《三重门》，该书成为当时畅销书，也让"韩寒"这个名字进入大众视野。</p>
+            <p>此后二十余年间，韩寒先后出版《零下一度》《像少年啦飞驰》《长安乱》《一座城池》《他的国》《1988：我想和这个世界谈谈》等多部小说与散文集。2010年，他主编杂志《独唱团》，引发文化界关注。2014年，韩寒执导个人首部电影《后会无期》，正式开启导演生涯，之后又陆续推出《乘风破浪》《飞驰人生》等作品。</p>
+            <p>在写作与电影之外，韩寒还是一名职业赛车手，曾多次获得中国汽车拉力锦标赛及中国房车锦标赛冠军。他的多重身份，让他成为当代中国最具话题性的文化人物之一。</p>
+        </div>
+    </section>
+
+    <section class="section-block">
+        <div class="container">
+            <h2 class="section-title">代表作品</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>《三重门》</h3>
+                    <p>韩寒首部长篇小说，出版于2000年。小说以中学生林雨翔的视角，描绘了校园生活的荒诞与青春期的迷茫。该书销量逾百万册，是韩寒最具代表性的文学作品。</p>
+                    <div class="meta">类型：长篇小说 | 出版时间：2000年</div>
+                </div>
+                <div class="card">
+                    <h3>《长安乱》</h3>
+                    <p>一部武侠题材小说，以唐朝为背景，讲述少年释然在江湖中的成长与奇遇。韩寒以独特的冷幽默和反讽笔触，解构了传统武侠叙事。</p>
+                    <div class="meta">类型：武侠/寓言 | 出版时间：2004年</div>
+                </div>
+                <div class="card">
+                    <h3>《1988：我想和这个世界谈谈》</h3>
+                    <p>小说以一辆1988年出厂的旅行车为线索，串联起主人公与妓女娜娜的公路旅程。作品延续了韩寒对现实社会的冷峻观察与温和批判。</p>
+                    <div class="meta">类型：公路小说 | 出版时间：2010年</div>
+                </div>
+                <div class="card">
+                    <h3>《后会无期》</h3>
+                    <p>韩寒执导的电影处女作，讲述三个年轻人在中国最东边的小岛相遇后，一起踏上横跨大陆的旅程。影片于2014年上映，票房口碑双丰收。</p>
+                    <div class="meta">类型：公路电影 | 上映时间：2014年</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-block">
+        <div class="container">
+            <h2 class="section-title">创作历程</h2>
+            <div class="list-timeline">
+                <div class="item">
+                    <div class="year">1999</div>
+                    <div class="content">
+                        <h4>新概念作文大赛获奖</h4>
+                        <p>以《杯中窥人》获首届全国新概念作文比赛一等奖，评审过程引发"教育体制"热议。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="year">2000</div>
+                    <div class="content">
+                        <h4>《三重门》出版</h4>
+                        <p>首部长篇小说问世，长期占据畅销书榜首，成为80后文学的代表作品之一。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="year">2010</div>
+                    <div class="content">
+                        <h4>创办《独唱团》</h4>
+                        <p>担任主编的文艺杂志《独唱团》创刊，首期销量突破百万，后因种种原因停刊。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="year">2014</div>
+                    <div class="content">
+                        <h4>电影《后会无期》上映</h4>
+                        <p>完成从作家到导演的转型，影片获得约6.3亿人民币票房，提名多个奖项。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="year">2019</div>
+                    <div class="content">
+                        <h4>《飞驰人生》上映</h4>
+                        <p>以赛车为题材的喜剧电影，融合个人赛车经历，成为春节档热门影片。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-block">
+        <div class="container">
+            <h2 class="section-title">电影作品一览</h2>
+            <div class="film-grid">
+                <div class="film-item">
+                    <div class="film-cover">后会无期</div>
+                    <div class="film-info">
+                        <h3>后会无期 (2014)</h3>
+                        <p>主演：冯绍峰、陈柏霖、袁泉等。三个年轻人在旅途中的告别与成长。</p>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="film-cover">乘风破浪</div>
+                    <div class="film-info">
+                        <h3>乘风破浪 (2017)</h3>
+                        <p>主演：邓超、彭于晏、赵丽颖。赛车手徐太浪穿越回父亲年轻时代的奇幻故事。</p>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="film-cover">飞驰人生</div>
+                    <div class="film-info">
+                        <h3>飞驰人生 (2019)</h3>
+                        <p>主演：沈腾、黄景瑜。曾经的拉力赛冠军张驰复出参赛的爆笑与热血之旅。</p>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="film-cover">四海</div>
+                    <div class="film-info">
+                        <h3>四海 (2022)</h3>
+                        <p>主演：刘昊然、刘浩存。小岛青年吴仁耀的摩托车梦想与都市漂泊。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="container">
+            <blockquote>"我所理解的生活，就是和自己喜欢的一切在一起。"</blockquote>
+            <cite>—— 韩寒</cite>
+        </div>
+    </section>
+
+    <section class="section-block">
+        <div class="container">
+            <h2 class="section-title">赛车生涯</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>拉力赛冠军</h3>
+                    <p>韩寒于2004年开始参加赛车比赛，曾多次获得中国汽车拉力锦标赛（CRC）年度车手总冠军，展现了出色的驾驶技术与竞技精神。</p>
+                </div>
+                <div class="card">
+                    <h3>场地赛荣誉</h3>
+                    <p>在CTCC中国房车锦标赛中，韩寒同样取得过年度冠军的优异成绩，是国内少有的在拉力赛和场地赛双线夺冠的赛车手。</p>
+                </div>
+                <div class="card">
+                    <h3>赛车与创作</h3>
+                    <p>赛车经历深刻影响了韩寒的写作与电影创作。《飞驰人生》即是以赛车为背景的故事，其中融入了大量真实的赛车细节与体验。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-block">
+        <div class="container">
+            <h2 class="section-title">博客精选与言论</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>《青春》</h3>
+                    <p>韩寒在博客中曾写道："青春是一场大雨，即使感冒了，也盼望回头再淋它一次。"这段话被广泛引用，成为一代人的青春注脚。</p>
+                    <div class="meta">来源：韩寒博客</div>
+                </div>
+                <div class="card">
+                    <h3>关于教育</h3>
+                    <p>"学校的教育，不应该只是培养考试机器，而应该培养真正有独立思考能力的人。"韩寒对教育体制的批评贯穿其博客写作始终。</p>
+                    <div class="meta">来源：韩寒博客</div>
+                </div>
+                <div class="card">
+                    <h3>公共表达</h3>
+                    <p>作为公共知识分子，韩寒通过博客、杂志和社交媒体持续发声，其言论在网络上产生过广泛影响，也引发过诸多争议。</p>
+                    <div class="meta">来源：综合整理</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-block">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>韩寒为什么被称为"一个韩寒"？</h4>
+                    <p>"一个韩寒"并非韩寒本人的自称，而是网友及媒体对他的一种概括性称呼。它强调韩寒的独特性与不可复制性，也常被用作关于韩寒的专题页面或讨论合集名称，寓意"韩寒只有一个"。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>韩寒的文学成就主要体现在哪些方面？</h4>
+                    <p>韩寒的文学成就主要体现在其早期小说创作上，尤其是《三重门》的出版，使他成为"80后文学"的代表人物之一。他的作品以犀利的语言、独特的视角和对社会现象的敏锐观察著称，但文学界对其作品的艺术价值评价存在分歧。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>韩寒的赛车水平如何？</h4>
+                    <p>韩寒是职业赛车手，曾多次获得中国汽车拉力锦标赛和CTCC中国房车锦标赛的年度冠军，其赛车水平在国内职业车手中属于一流水平。他是演艺圈中少有的真正达到职业赛车水准的人物。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>韩寒是否还在写作？</h4>
+                    <p>近年来韩寒将主要精力投入电影导演工作，文学写作相对减少。他曾在采访中表示，写作仍然是其重要的表达方式，但会以更审慎的态度对待出版。此外，他担任监制的电影项目也在持续推进中。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>作品分类</h4>
+                    <ul>
+                        <li><a href="#">长篇小说</a></li>
+                        <li><a href="#">散文随笔</a></li>
+                        <li><a href="#">博客精选</a></li>
+                        <li><a href="#">电影剧本</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>影视作品</h4>
+                    <ul>
+                        <li><a href="#">后会无期</a></li>
+                        <li><a href="#">乘风破浪</a></li>
+                        <li><a href="#">飞驰人生</a></li>
+                        <li><a href="#">四海</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">韩寒百度百科</a></li>
+                        <li><a href="#">韩寒微博</a></li>
+                        <li><a href="#">亭东影业</a></li>
+                        <li><a href="#">赛车新闻</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>关于本站</h4>
+                    <ul>
+                        <li><a href="#">网站介绍</a></li>
+                        <li><a href="#">内容来源</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>本站为非官方爱好者资料站，旨在整理与分享韩寒相关信息。内容仅供参考，不构成任何立场。</p>
+                <p>© 2024 一个韩寒 yigehanhan.com 保留部分权利</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
